@@ -1,0 +1,27 @@
+
+RUN: ./word input-one-line.txt input-long-line.txt input-empty-lines.txt pseudo.txt
+
+Child process for input-one-line.txt: number of words in file is 9
+Child process for input-long-line.txt: number of words in file is 164
+Child process for input-empty-lines.txt: number of words in file is 173
+
+All 3 files have been counted
+
+THIS IS WHAT MY PROGRAM GOT FROM THE WC UTILITY WHEN COUNTING JUST WORDS:
+9 input-one-line.txt
+164 input-long-line.txt
+173 input-empty-lines.txt
+
+The program is designed to make sure that there is at least one command line argument, then it begins a loop that is responsible for forking a child process 
+for each file/command line argument. Also in that same loop depending on whether it is the child or parent,an action is taken. If the parent; wait for the child
+to finish its actions using the wait() call, if the child; then execute a function that is in charge of counting the number of words in the file and then 
+break in the child process so that it wont fork again. The countFile() function is in charge of opening and closing a file, reading from the file,  
+counting the number of words in a file, and printing the number of words in that file. It counts the number of words in a file by using spaces as a delimiter 
+as well as new lines with the condition that new lines are not added to the word count if there are too many in a row. The program ends by printing the number
+of files that had a process counting its words.Although the program seems to work correctly since it got the right word count for all the files, there are 
+some bugs. The program doesnt count the number of tabs but somehow it gets the correct number of words, also when testing when one of my own files the word
+count would be a little higher than its actual word count and I suspect that it has something to do with a bunch of new lines I inserted in there. The only help
+I received was a tip from Dr.Lama which helped me realize I was not dealing with new lines correctly. This assignment is pretty straightforward,simple yet challenging,
+and one thing I realized while doing it is that you have to think of the many different cases that can create bugs in your program. I recommend that in future versions
+of this assignment, that the instructions clearly state the types of whitespace(new lines, tabs) you have to work with to ensure your program works.
+

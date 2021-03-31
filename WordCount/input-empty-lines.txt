@@ -1,0 +1,5 @@
+
+Designing Techniques for Coping with Increasingly Non-uniform Memory Architectures
+
+
+Overview: You will write a program (says wordcount.c) to find out the number of words in multiple text files. Specifically, the program will first determine the number of files to be processed. Then, the program will create multiple processes with each process being responsible for one file to count its words. The typical format to run the program with input parameters is as follows. Details: First, the program needs to determine the number of files to be processed. This can be done with the argc parameter of the main function; Then, the argv parameter can be used to retrieve the name for each file. After that, fork() system call will be used to create multiple processes (one for each file). For each child process, it can simply invoke a function to count the number of words inside a specific file and print out the result like [note that, no inter-process communication is required as child processes will report (i.e., print out) their results individually].
