@@ -1,0 +1,12 @@
+I did not collaborate with anyone or receive help from anyone except Dr.Lama.
+Dr.Lama helped me understand what the goal was, it forced me to redo my program because I was not doing it correctly.
+Yes, everything i did is correct. 
+The assignment took a lot of thinking, the hardest part about it was having to keep up with the different cases and figuring out how to implement LRU.
+The only weird things that my assignment does is for part 1 it prints out a bunch of numbers but I am not sure why, it doesnt affect my output file though as the md5sum is correct.
+Also for part2 it prints a bunch of new lines but it doesnt affect my output file and the md5sum is correct.
+
+fox06:~/courses/OS/assignments/assignment3> md5sum part1-output
+ceabc02825a5b908e474b053074ab53c  part1-output
+
+fox06:~/courses/OS/assignments/assignment3> md5sum part2-output
+c95b27848ae8d4354d87678d075001f7  part2-output
