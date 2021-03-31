@@ -1,0 +1,246 @@
+Program is Complete. assignment was challenging but fun no complaints on it.
+No collabaration with anyone, lone wolf.
+ls -l *.all
+-rw------- 1 huh550 students 44344505 Oct 17 23:40 fcfs.all
+-rw------- 1 huh550 students 42267254 Oct 17 23:40 psjf.all
+-rw------- 1 huh550 students 46409184 Oct 17 23:40 rr.all
+-rw------- 1 huh550 students 43243789 Oct 17 23:40 sjf.all
+wc *.all
+  2000001   2000001  44344505 fcfs.all
+  2000001   2000001  42267254 psjf.all
+  2000001   2000001  46409184 rr.all
+  2000001   2000001  43243789 sjf.all
+  8000004   8000004 176264732 total
+md5sum *.all
+eb52ae7e6e8062cb4758d3fc93684fe0  fcfs.all
+86fdd06789681d3a3caf50b8d28002be  psjf.all
+27271d1d1e463d617ddef821f78d523d  rr.all
+1983a9729de7bf4f77dffbdc0cfe0f4c  sjf.all
+
+TEST CASES/OUTPUT:
+
+Case 1:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  8  7  3  6  3  2
+
+Scheduler FCFS
+RRRRRRRRwwwwwwwRRR
+rrrrrrrrRRRRRRwwwrRR
+0 9 4.500000 0.950000
+
+Scheduler SJF
+rrrrrrRRRRRRRRwwwwwwwRRR
+RRRRRRwwwrrrrrRR
+6 5 5.500000 0.791667
+
+Scheduler PSJF
+rrrrrrRRRrrRRRRRwwwwwwwRRR
+RRRRRRwwwRR
+8 0 4.000000 0.730769
+
+Scheduler RR
+RRRrrrRRRrrrRRwwwwwwwRRR
+rrrRRRrrrRRRwwwRR
+6 6 6.000000 0.791667
+
+Case 2:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  8  7  3  6  7  2
+
+Scheduler FCFS
+RRRRRRRRwwwwwwwRRR
+rrrrrrrrRRRRRRwwwwwwwRR
+0 8 4.000000 0.826087
+
+Scheduler SJF
+rrrrrrRRRRRRRRwwwwwwwRRR
+RRRRRRwwwwwwwrRR
+6 1 3.500000 0.791667
+
+Scheduler PSJF
+rrrrrrRRRRRRRRwwwwwwwRRR
+RRRRRRwwwwwwwrRR
+6 1 3.500000 0.791667
+
+Scheduler RR
+RRRrrrRRRrrrRRwwwwwwwRRR
+rrrRRRrrrRRRwwwwwwwRR
+6 6 6.000000 0.791667
+
+Case 3:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  4  8  7  3  6  1  2
+
+Scheduler FCFS
+RRRRRRRRwwwwwwwRRR
+rrrrrrrrRRRRRRwrrrRR
+0 11 5.500000 0.950000
+
+Scheduler SJF
+rrrrrrRRRRRRRRwwwwwwwRRR
+RRRRRRwrrrrrrrRR
+6 7 6.500000 0.791667
+
+Scheduler PSJF
+rrrrrrRrrRRRRRRRwwwwwwwRRR
+RRRRRRwRR
+8 0 4.000000 0.730769
+
+Scheduler RR
+RRRRrrrrRRRRwwwwwwwRRR
+rrrrRRRRrrrrRRwRR
+4 8 6.000000 0.863636
+
+Case 4:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  3  3  4  2  1  2
+
+Scheduler FCFS
+RRRwwwRRRR
+rrrRRwrrrrRR
+0 7 3.500000 0.916667
+
+Scheduler SJF
+rrRRRwwwRRRR
+RRwrrRR
+2 2 2.000000 0.916667
+
+Scheduler PSJF
+rrRRRwwwRRRR
+RRwrrRR
+2 2 2.000000 0.916667
+
+Scheduler RR
+RRRwwwRRRrrR
+rrrRRwrrrRR
+2 6 4.000000 0.916667
+
+Case 5:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  3  2  3  2  1  2
+
+Scheduler FCFS
+RRRwwRRR
+rrrRRwrrRR
+0 5 2.500000 1.000000
+
+Scheduler SJF
+rrRRRwwRRR
+RRwrrRR
+2 2 2.000000 1.000000
+
+Scheduler PSJF
+rrRRRwwRRR
+RRwrrRR
+2 2 2.000000 1.000000
+
+Scheduler RR
+RRRwwRRR
+rrrRRwrrRR
+0 5 2.500000 1.000000
+
+Case 6:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  5  2  5  4  1  1
+
+Scheduler FCFS
+RRRRRwwrrRRRRR
+rrrrrRRRRwrrrrR
+2 9 5.500000 1.000000
+
+Scheduler SJF
+rrrrRRRRRwwRRRRR
+RRRRwrrrrR
+4 4 4.000000 0.937500
+
+Scheduler PSJF
+rrrrRrRRRRwwRRRRR
+RRRRwR
+5 0 2.500000 0.882353
+
+Scheduler RR
+RRRrrrRRwwRRRrRR
+rrrRRRrrRwrrrR
+4 8 6.000000 0.937500
+
+Case 7:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  2  3  4  1  1  5
+
+Scheduler FCFS
+RRwwwrrrrRRRR
+rrRwRRRRR
+4 2 3.000000 0.923077
+
+Scheduler SJF
+rRRwwwrrRRRR
+RwrRRRRR
+3 1 2.000000 1.000000
+
+Scheduler PSJF
+rRRwwwrrRRRR
+RwrRRRRR
+3 1 2.000000 1.000000
+
+Scheduler RR
+RRwwwrrRRRrrR
+rrRwRRRrrrRR
+4 5 4.500000 0.923077
+
+Case 8:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  2  3  4  1  4  1
+
+Scheduler FCFS
+RRwwwRRRR
+rrRwwwwrrR
+0 4 2.000000 0.800000
+
+Scheduler SJF
+rRRwwwRRRR
+RwwwwR
+1 0 0.500000 0.800000
+
+Scheduler PSJF
+rRRwwwRRRR
+RwwwwR
+1 0 0.500000 0.800000
+
+Scheduler RR
+RRwwwRRRrR
+rrRwwwwrR
+1 3 2.000000 0.800000
+
+Case 9:
+
+Assignment 2 program was written by Diego Reyes
+Arguments:  3  2  3  4  5  6  2
+
+Scheduler FCFS
+RRwwwrrRRRR
+rrRRRRRwwwwwwRR
+2 2 2.000000 0.866667
+
+Scheduler SJF
+RRwwwrrRRRR
+rrRRRRRwwwwwwRR
+2 2 2.000000 0.866667
+
+Scheduler PSJF
+RRwwwrrRRRR
+rrRRRRRwwwwwwRR
+2 2 2.000000 0.866667
+
+Scheduler RR
+RRwwwRRRrrR
+rrRRRrrrRRwwwwwwRR
+2 5 3.500000 0.722222
+
