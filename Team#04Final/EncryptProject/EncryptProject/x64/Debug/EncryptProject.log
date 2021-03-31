@@ -1,0 +1,7 @@
+﻿  Main_Students.cpp
+c:\users\thedi\desktop\softwaremalware reverse engineering\projects\team4finalzip\team#04final\main_students.cpp(86,44): warning C4267:  '=': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\users\thedi\desktop\softwaremalware reverse engineering\projects\team4finalzip\team#04final\main_students.cpp(161,44): warning C4309:  'argument': truncation of constant value
+c:\users\thedi\desktop\softwaremalware reverse engineering\projects\team4finalzip\team#04final\main_students.cpp(77,15): warning C4101:  'pwdHashIndx': unreferenced local variable
+c:\users\thedi\desktop\softwaremalware reverse engineering\projects\team4finalzip\team#04final\main_students.cpp(76,34): warning C4101:  'i': unreferenced local variable
+LINK : warning LNK4044: unrecognized option '/Zc:strictStrings-'; ignored
+  EncryptProject.vcxproj -> C:\Users\thedi\Desktop\SoftwareMalware Reverse Engineering\Projects\Team4FinalZip\Team#04Final\EncryptProject\x64\Debug\EncryptProject.exe

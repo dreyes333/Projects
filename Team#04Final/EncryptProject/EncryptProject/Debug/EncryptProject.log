@@ -1,0 +1,4 @@
+﻿  Main_Students.cpp
+C:\Users\Ben\Documents\EncProj\Team#04Final\Main_Students.cpp(77,15): warning C4101:  'pwdHashIndx': unreferenced local variable
+C:\Users\Ben\Documents\EncProj\Team#04Final\Main_Students.cpp(76,34): warning C4101:  'i': unreferenced local variable
+  EncryptProject.vcxproj -> C:\Users\Ben\Documents\EncProj\Team#04Final\EncryptProject\Debug\EncryptProject.exe

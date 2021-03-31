@@ -1,0 +1,13 @@
+00434C38 BEFORE MYSTERY2
+
+00434c55 AFTER MYSTERY2
+
+x24 --> x81
+
+x83 --> x2c
+
+x02 --> x08
+
+
+x6a --> x9a
+
