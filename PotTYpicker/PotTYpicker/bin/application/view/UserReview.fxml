@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.UserReviewController">
+   <children>
+      <AnchorPane fx:id="father" layoutX="-10.0" layoutY="-1.0" prefHeight="800.0" prefWidth="854.0" style="-fx-background-color: #17222c;">
+         <children>
+            <VBox layoutX="12.0" layoutY="15.0" prefHeight="724.0" prefWidth="226.0">
+               <children>
+                  <Button fx:id="displayOverview" mnemonicParsing="false" onAction="#displayOverview" prefHeight="59.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Overview" textFill="#aea4a4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="6.0" prefWidth="6.0" />
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="map_redirect" mnemonicParsing="false" onAction="#map_redirect" prefHeight="59.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Map" textFill="#aea4a4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="6.0" prefWidth="6.0" />
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="send" mnemonicParsing="false" onAction="#send" prefHeight="76.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Something Missing??" textFill="#aea4a4">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+            <ImageView fx:id="rate1" fitHeight="40.0" fitWidth="58.0" layoutX="404.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../rating/empty.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rate2" fitHeight="40.0" fitWidth="58.0" layoutX="463.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../rating/empty.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rate4" fitHeight="40.0" fitWidth="58.0" layoutX="575.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../rating/empty.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rate3" fitHeight="40.0" fitWidth="58.0" layoutX="520.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../rating/empty.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rate5" fitHeight="40.0" fitWidth="58.0" layoutX="638.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../rating/empty.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button1" layoutX="404.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#event1" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <ImageView fx:id="popup" fitHeight="130.0" fitWidth="144.0" layoutX="458.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../rating/gold-star.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button2" layoutX="463.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#event2" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button3" layoutX="520.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#event3" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button4" layoutX="575.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#event4" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button5" layoutX="638.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#event5" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="submit" layoutX="603.0" layoutY="692.0" mnemonicParsing="false" onAction="#submit" text="Leave a Review" />
+            <Label fx:id="after_submit" layoutX="369.0" layoutY="719.0" prefHeight="33.0" prefWidth="280.0" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="text_review" alignment="TOP_LEFT" layoutX="396.0" layoutY="388.0" maxHeight="400.0" maxWidth="800.0" prefHeight="296.0" prefWidth="311.0" promptText="Pleave your review for better assist you" style="-: #2E3849;" />
+   </children>
+</AnchorPane>

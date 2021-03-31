@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.*?>
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import de.jensd.fx.glyphs.weathericons.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0" />
+      <ImageView fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/background-1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="320.0" layoutY="536.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/bathroom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="450.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/toilet-paper-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="120.0" layoutX="360.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/Dslr-Camera-icon.png" />
+         </image>
+      </ImageView>
+      <Line endX="100.0" layoutX="550.0" layoutY="190.0" startX="-110.0" stroke="#ffb1b1" />
+      <Line endX="110.0" layoutX="250.0" layoutY="189.0" startX="-110.0" stroke="#ffb1b1" />
+      <Line endX="200.0" layoutY="350.0" rotate="90.0" startX="-100.0" stroke="#ffb1b1" translateX="600.0" translateY="-10.0" />
+      <Line endX="200.0" layoutX="10.0" layoutY="360.0" rotate="90.0" startX="-100.0" stroke="#ffb1b1" translateX="80.0" translateY="-20.0" />
+      <Line endX="410.0" layoutX="20.0" layoutY="370.0" startX="-100.0" stroke="#ffb1b1" translateX="220.0" translateY="120.0" />
+      <PasswordField fx:id="password" layoutX="321.0" layoutY="369.0" prefHeight="27.0" prefWidth="169.0" promptText="Password" />
+      <TextField fx:id="username" layoutX="322.0" layoutY="309.0" promptText="Username" />
+      <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="286.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/email-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="286.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/security.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="login" ellipsisString="" layoutX="428.0" layoutY="413.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #fc6e51;" text="LOGIN">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button ellipsisString="" layoutX="320.0" layoutY="413.0" mnemonicParsing="false" onAction="#register" style="-fx-background-color: #fc6e51;" text="REGISTER">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="message" layoutX="297.0" layoutY="453.0" textFill="#c61111" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #17222c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SendEmailController">
+   <children>
+      <ImageView fitHeight="129.0" fitWidth="120.0" layoutX="106.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/toilet-paper-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="138.0" fitWidth="117.0" layoutX="339.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/Toilet-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="134.0" layoutX="547.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/sink.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="211.0" layoutX="534.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" style="-fx: #17222c;">
+         <image>
+            <Image url="@../../../image/urinals.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="82.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/papertowels.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="309.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/handdryer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="toilet_paper" layoutX="98.0" layoutY="30.0" mnemonicParsing="false" onAction="#toilet_paper" prefHeight="135.0" prefWidth="133.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="toilet" layoutX="331.0" layoutY="37.0" mnemonicParsing="false" onAction="#toilet" prefHeight="128.0" prefWidth="135.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="tower_paper" layoutX="100.0" layoutY="191.0" mnemonicParsing="false" onAction="#tower_paper" prefHeight="144.0" prefWidth="117.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="hand_dryer" layoutX="268.0" layoutY="188.0" mnemonicParsing="false" onAction="#hand_dryer" prefHeight="158.0" prefWidth="250.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="sink" layoutX="527.0" layoutY="33.0" mnemonicParsing="false" onAction="#sink" prefHeight="145.0" prefWidth="169.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="urinals" layoutX="565.0" layoutY="193.0" mnemonicParsing="false" onAction="#urinals" prefHeight="146.0" prefWidth="159.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="SubmitRequest" layoutX="498.0" layoutY="619.0" mnemonicParsing="false" onAction="#SubmitRequest" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: transparent;" text="Submit Request" textFill="#fff3f3">
+         <font>
+            <Font name="American Typewriter" size="19.0" />
+         </font>
+      </Button>
+      <TextField fx:id="display" layoutX="63.0" layoutY="409.0" prefHeight="197.0" prefWidth="704.0" promptText="Please click on icon according to your need or type in this box for others. ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
