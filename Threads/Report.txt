@@ -1,0 +1,249 @@
+SECTION: PART 1
+
+NOTE: Run program like this..... gcc assign4-part1.c -o part1Thread -pthread
+
+I used the function pthread_join() in my program by implementing it in creatPhilosopher().
+The pthread_join() function is placed in a for loop after pthread_create() so that for every created thraed pthread_join() is called....\n
+to ensure that main thread doesnt terminate until called threads are done. To ensure that last thread was terminated correctly.....\n 
+I put an if statement to check that j==nthreads, where is the index of each thread being created, and if true then print a success message and return.
+
+OUTPUT:
+*****************************************************************************************
+fox06:~/courses/OS/assignments/assignment4> ./part1Thread 5
+
+Diego Reyes
+Assignment 4: # of threads = 5
+This is philosopher 1
+This is philosopher 3
+This is philosopher 4
+This is philosopher 5
+This is philosopher 5
+5 threads have been completed/joined successfully!
+
+fox06:~/courses/OS/assignments/assignment4> ./part1Thread 20
+
+fox06:~/courses/OS/assignments/assignment4> ./part1Thread 20
+
+Diego Reyes
+Assignment 4: # of threads = 20
+This is philosopher 2
+This is philosopher 3
+This is philosopher 6
+This is philosopher 6
+This is philosopher 6
+This is philosopher 6
+This is philosopher 7
+This is philosopher 9
+This is philosopher 11
+This is philosopher 12
+This is philosopher 13
+This is philosopher 15
+This is philosopher 16
+This is philosopher 17
+This is philosopher 18
+This is philosopher 20
+This is philosopher 20
+This is philosopher 20
+This is philosopher 20
+This is philosopher 20
+20 threads have been completed/joined successfully!
+
+********************************************************************************************
+
+SECTION: PART 2 
+
+OUTPUT:
+
+fox06:~/courses/OS/assignments/assignment4> ./part2Mutex 5
+
+Diego Reyes
+Assignment 4: # of threads = 5
+Philosopher #-1: started thinking
+Philosopher #-3: started thinking
+Philosopher #-3: started thinking
+Philosopher #-4: started thinking
+Philosopher #-0: started thinking
+Philosopher #-3: end thinking
+Philosopher #-3: started eating
+Philosopher #-1: end thinking
+Philosopher #-4: end thinking
+Philosopher #-1: started eating
+Philosopher #-3: end thinking
+Philosopher #-0: end thinking
+Philosopher #-3: end eating
+Philosopher #-3: started eating
+Philosopher #-1: end eating
+Philosopher #-0: started eating
+Philosopher #-3: end eating
+Philosopher #-0: end eating
+Philosopher #-4: started eating
+Philosopher #-4: end eating
+5 threads have been completed/joined successfully!
+
+fox06:~/courses/OS/assignments/assignment4> ./part2Mutex 20
+
+Diego Reyes
+Assignment 4: # of threads = 20
+Philosopher #-3: started thinking
+Philosopher #-4: started thinking
+Philosopher #-5: started thinking
+Philosopher #-6: started thinking
+Philosopher #-6: started thinking
+Philosopher #-7: started thinking
+Philosopher #-8: started thinking
+Philosopher #-8: started thinking
+Philosopher #-9: started thinking
+Philosopher #-10: started thinking
+Philosopher #-13: started thinking
+Philosopher #-14: started thinking
+Philosopher #-8: end thinking
+Philosopher #-8: started eating
+Philosopher #-14: started thinking
+Philosopher #-5: end thinking
+Philosopher #-19: started thinking
+Philosopher #-5: started eating
+Philosopher #-14: started thinking
+Philosopher #-13: end thinking
+Philosopher #-13: started eating
+Philosopher #-14: end thinking
+Philosopher #-7: end thinking
+Philosopher #-4: end thinking
+Philosopher #-3: end thinking
+Philosopher #-8: end eating
+Philosopher #-16: started thinking
+Philosopher #-14: end thinking
+Philosopher #-9: end thinking
+Philosopher #-9: started eating
+Philosopher #-6: end thinking
+Philosopher #-14: end thinking
+Philosopher #-19: started thinking
+Philosopher #-13: end eating
+Philosopher #-0: started thinking
+Philosopher #-14: started thinking
+Philosopher #-6: end thinking
+Philosopher #-8: end thinking
+Philosopher #-17: started thinking
+Philosopher #-16: end thinking
+Philosopher #-16: started eating
+Philosopher #-14: started eating
+Philosopher #-5: end eating
+Philosopher #-7: started eating
+Philosopher #-10: end thinking
+Philosopher #-4: started eating
+Philosopher #-19: end thinking
+Philosopher #-19: started eating
+Philosopher #-9: end eating
+Philosopher #-0: end thinking
+Philosopher #-14: end thinking
+Philosopher #-10: started eating
+Philosopher #-19: end thinking
+Philosopher #-17: end thinking
+Philosopher #-14: end eating
+Philosopher #-4: end eating
+Philosopher #-16: end eating
+Philosopher #-14: started eating
+Philosopher #-7: end eating
+Philosopher #-17: started eating
+Philosopher #-19: end eating
+Philosopher #-8: started eating
+Philosopher #-3: started eating
+Philosopher #-6: started eating
+Philosopher #-10: end eating
+Philosopher #-19: started eating
+Philosopher #-14: end eating
+Philosopher #-17: end eating
+Philosopher #-8: end eating
+Philosopher #-14: started eating
+Philosopher #-3: end eating
+Philosopher #-6: end eating
+Philosopher #-19: end eating
+Philosopher #-6: started eating
+Philosopher #-0: started eating
+Philosopher #-14: end eating
+Philosopher #-14: started eating
+Philosopher #-6: end eating
+Philosopher #-0: end eating
+Philosopher #-14: end eating
+20 threads have been completed/joined successfully!
+
+My program got about 20 deadlocks when i ran it with the tets script which test it about1000 times.
+
+SECTION: PART 3
+
+No deadlocks occured most of the time(90%) of the time which is way better than section 2 and order fixed somewhat.
+The conditional varibales prevent the philosopher from picking up chopsticks by putting up more restrictions like in the code below.
+based on the statement:
+	pthread_mutex_lock(&lock);
+	while(nextIndex!=threadIndex) {
+		wait()...
+	if(threadIndex == nextIndex){
+		//pick up both chopsticks
+	}
+
+OUTPUT:
+
+fox06:~/courses/OS/assignments/assignment4> ./part3Cond 5
+
+Diego Reyes
+Assignment 4: # of threads = 5
+Philosopher #-1: started thinking
+Philosopher #-2: started thinking
+Philosopher #-3: started thinking
+Philosopher #-4: started thinking
+Philosopher #-0: started thinking
+Philosopher #-1: end thinking
+Philosopher #-2: end thinking
+Philosopher #-3: end thinking
+Philosopher #-4: end thinking
+Philosopher #-0: end thinking
+Philosopher #-0: started eating
+Philosopher #-0: end eating
+Philosopher #-1: started eating
+Philosopher #-1: end eating
+Philosopher #-2: started eating
+Philosopher #-2: end eating
+Philosopher #-3: started eating
+Philosopher #-3: end eating
+Philosopher #-4: started eating
+Philosopher #-4: end eating
+5 threads have been completed/joined successfully!
+
+SECTION: PART 4 EXTRA CREDIT
+
+The mutex try-lock ensures that the lock will recursively continue to try the lock until it is successful, comments in code on how it works.
+No deadlocks occurred while testing and order is not fixed.
+
+fox06:~/courses/OS/assignments/assignment4> ./part4TryLock 5
+
+Diego Reyes
+Assignment 4: # of threads = 5
+Philosopher #-1: started thinking
+Philosopher #-2: started thinking
+Philosopher #-3: started thinking
+Philosopher #-4: started thinking
+Philosopher #-0: started thinking
+Philosopher #-1: end thinking
+Philosopher #-1: started eating
+Philosopher #-3: end thinking
+Philosopher #-4: end thinking
+Philosopher #-2: end thinking
+Philosopher #-0: end thinking
+Philosopher #-3: started eating
+Philosopher #-1: end eating
+Philosopher #-0: started eating
+Philosopher #-3: end eating
+Philosopher #-2: started eating
+Philosopher #-0: end eating
+Philosopher #-4: started eating
+Philosopher #-2: end eating
+Philosopher #-4: end eating
+5 threads have been completed/joined successfully!
+
+REPORT QUESTIONS
+
+1.) I collaborated with no one except Dr.Lama and it was mostly regarding bugs in my code and expected outputs so I would say small collaboration.
+2/3.) I dont think everything I did was correct mostly because threading and synchronization are pretty new concepts and theres alot of things you have to be careful with
+when working with threads. for part 3 I know something is off because a deadlock occurs 1 out of 20 times when running my program but for part4 extra credit it didnt occur.
+4.) The assignment was a pretty interesting I just felt like we didnt have many examples on mutex, conditional variables being implement for other problems, and since
+it is such a abstract topic more practice is needed beforehand. Some of these challengers were knowing where to initialize mutex variables, and dunctions as well
+as conditional variables. 
